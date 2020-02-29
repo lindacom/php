@@ -1,4 +1,12 @@
+Display default image if no image exists in db
+==============================================
+
+        <object data='.$row["image"].' width="250px" class="group list-group-image">
+    <img src="http://placehold.it/400x250/000/fff" width="250px"/>
+  </object>
+
 VALIDATING DATA (E.G. FORMS)
+============================
 
 Always check that a value isset before using it
 
