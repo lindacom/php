@@ -16,7 +16,7 @@ This way, the user will get error messages on the same page as the form.:
 Required fields
 ===============
 
-1. Define required fields with error message
+1. Define required fields with error message and prevent the form from emptying all the input fields when the user submits the form.
 2. validate fields (name - letters only, email contains @ and .)
 
 A. Write a php script to define empty variables for each input field and empty error variables for mandatory fields.
