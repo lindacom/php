@@ -1,0 +1,27 @@
+//START AND SET THE SESSION
+
+<?php
+    session_start();
+
+    if(isset($_GET['title']) && $_GET['title'] !== ""){
+        if(!isset($_SESSION['cart']) && !is_array($_SESSION['cart'])){
+            $_SESSION['cart'] = array();
+        } 
+
+        array_push($_SESSION['cart'], $_GET['title']);
+     
+        
+    }
+?>
+
+// ECHO SESSION ARRAY
+
+<?php 
+   // number of items in the cart
+echo "Number of Items in the cart = ".sizeof($_SESSION['cart'])." <br>";
+
+// list cart items
+while (list ($key, $val) = each ($_SESSION['cart'])) { 
+echo "$key $val <br>"; 
+}
+?>
