@@ -1,0 +1,30 @@
+Count the number of clicks on a download link
+===============================================
+
+1. CREATE A COUNTER.TXT FILE WITH THE NUMBER 0 IN IT TO START
+
+2. DOWNLOAD BUTTON
+
+```
+<a href="path/to/counter.php">DOWNLOAD</a>
+```
+
+3. COUNTER.PHP - increment and writes to counter.txt file
+
+```<?php
+
+ $counter = 'counter.txt';      // text file to store download count - create manually and put a 0 (zero) in it to begin the count
+ //$download = 'http://mywebsite.com/file/to/download.zip';    // the link to your download file
+
+ $number = file_get_contents($counter);    // read count file
+ $number++;                                // increment count by 1
+ $fh = fopen($counter, 'w');               // open count file for writing
+ fwrite($fh, $number);                     // write new count to count file
+ fclose($fh);                              // close count file
+// header("Location: $download");            // get download
+
+?>
+```
+
+4. DISPLAY DOWNLOAD COUNT ON A WEBPAGE
+<?php echo file_get_contents('counter.txt');?>
