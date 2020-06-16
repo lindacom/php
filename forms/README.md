@@ -25,6 +25,9 @@ To create a good user experience:
 1. Define required fields with error message and prevent the form from emptying all the input fields when the user submits the form.
 2. validate fields (name - letters only, email contains @ and .)
 
+Form validation
+================
+
 A. Write a php script to define empty variables for each input field and empty error variables for mandatory fields.
 B. Include an if statement if ($_SERVER["REQUEST_METHOD"] == "POST") {
 C. Include a statement that checks if field is empty then displays error 
