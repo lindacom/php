@@ -4,8 +4,8 @@
 <title>Form with validation</title>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="http://lindacom.infinityfreeapp.com/css/app.scss">
-   <link rel="stylesheet" type="text/css" href="http://lindacom.infinityfreeapp.com/css/modules.scss">
+   <link rel="stylesheet" href="/css/app.scss">
+   <link rel="stylesheet" type="text/css" href="/css/modules.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.min.css">
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -25,7 +25,7 @@
     <ul class="dropdown menu" data-dropdown-menu>
       <li class="menu-text">Web Development Training Website</li>
       
-      <li> <a href="http://lindacom.infinityfreeapp.com/forms.php">Forms menu</a></li>
+      <li> <a href="/forms.php">Forms menu</a></li>
       
     </ul>
   </div>
@@ -41,8 +41,8 @@
 
       <?php
          // define variables and set to empty values
-         $nameErr = $emailErr = $age = $catErr = $dayErr = "";
-         $name = $email = $age = $cat = $day = "";
+         $nameErr = $emailErr = $age = $catErr = "";
+         $name = $email = $age = $cat = "";
          
          if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
@@ -76,13 +76,7 @@
                 if ($_POST["age"] < 10) $ageErr = 'I am telling your mum.';
             }
 
-             if (empty($_POST["day"])) {
-               $dayErr = "Please enter a day of the week";
-            }else {
-               $day = test_input($_POST["day"]);
-               // check if day is between monday and friday
-            }
-            
+                     
             if (empty($_POST["cat"])) {
                $catErr = "Please enter a cat name";
             }else {
@@ -145,9 +139,7 @@ lookup, blank fields check, value between specified range.</p>
                    <label for="month">Select a month:</label>
   <input type="month" id="month" name="month">
 
-               <!-- STILL TO DO -->
-               What day is it today? <input type = "text" name = "day" value="<?php echo $day;?>" placeholder="only monday to friday is accepted">
-                  <span class = "error"><?php echo $dayErr;?></span>       
+              
               
                   
                
