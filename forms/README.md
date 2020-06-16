@@ -29,6 +29,12 @@ Form validation
 ================
 
 A. Write a php script to define empty variables for each input field and empty error variables for mandatory fields.
+
+```
+  $nameErr = $emailErr = $age = $catErr = "";
+         $name = $email = $age = $cat = "";
+ ```
+         
 B. Include an if statement if ($_SERVER["REQUEST_METHOD"] == "POST") {
 C. Include a statement that checks if field is empty then displays error 
 ```
