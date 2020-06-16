@@ -1,4 +1,4 @@
-Validate form data
+Form data
 ===================
 
 Both GET and POST create an array (e.g. array( key1 => value1, key2 => value2, key3 => value3, ...)). 
@@ -19,6 +19,8 @@ This way, the user will get error messages on the same page as the form.:
 
 Required fields
 ===============
+
+To create a good user experience: 
 
 1. Define required fields with error message and prevent the form from emptying all the input fields when the user submits the form.
 2. validate fields (name - letters only, email contains @ and .)
