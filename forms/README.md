@@ -4,8 +4,12 @@ Validate form data
 Both GET and POST create an array (e.g. array( key1 => value1, key2 => value2, key3 => value3, ...)). 
 This array holds key/value pairs, where keys are the names of the form controls and values are the input data from the user.
 
+Form security
+--------------
+
 The htmlspecialchars() function converts special characters to HTML entities.This prevents attackers from exploiting the code by injecting HTML or Javascript code (Cross-site Scripting attacks) in forms.
-sends the submitted form data to the page itself, instead of jumping to a different page. 
+
+Php self sends the submitted form data to the page itself, instead of jumping to a different page. 
 This way, the user will get error messages on the same page as the form.:
 
 ```
