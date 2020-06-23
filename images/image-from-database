@@ -1,0 +1,22 @@
+DATABASE CONNECTION
+====================
+<?php  include 'db.php';
+?>
+
+FETCH DATA
+============
+<?php 
+$sql = "SELECT user_id, user_name, user_email, user_type, user_image FROM blogusers WHERE user_name='$username' ";
+$result = $connect->query($sql);
+$fetchRow = mysqli_fetch_assoc($result);
+ 
+$connect->close();
+?>
+
+DISPLAY IMAGE
+==============
+<!-- show image from database - if no image show placeholder image -->
+
+           <object data="<?php echo $fetchRow['user_image']?>" style="border-radius:50%; width:150px;">
+           <img src="http://placehold.it/400x250/000/fff" width="100%" style="border-radius:50%; width:150px;"/> 
+    </object>
