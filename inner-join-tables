@@ -1,0 +1,29 @@
+<?php
+include'db.php';
+
+ $stmt = "
+ SELECT blogcomments.comment_id, blogcomments.user_id, blogcomments.blogTitle, blogcomments.description, blogusers.user_name, blogcomments.user_id FROM blogcomments 
+ INNER JOIN blogusers
+ ON  blogcomments.user_id = blogusers.user_id 
+ ORDER BY comment_id DESC
+ ";
+
+//$stmt= "SELECT comment_id, user_id, blogTitle, description FROM blogcomments";
+$result = $connect->query($stmt);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "
+        blog id: " . $row["comment_id"]. " 
+        user id: " . $row["user_id"]. " 
+        user name: " . $row["user_name"]. " 
+        Blog title: " . $row["blogTitle"]. " 
+        Comment: " . $row["description"]. "
+        <br>";
+    }
+} else {
+    echo "0 results";
+}
+$connect->close();
+ ?>
