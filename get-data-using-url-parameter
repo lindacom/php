@@ -1,0 +1,11 @@
+<?php 
+    $username = $_GET["username"];
+    
+	$sql = "select user_id from blogusers where user_name = '$username' " ;
+    
+    $rs = mysqli_query($connect, $sql);
+	//get row
+	$fetchRow = mysqli_fetch_assoc($rs);
+?> 
+
+<input type="text" name="title" value="<?php echo $fetchRow['user_id']?>">
