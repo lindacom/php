@@ -1,0 +1,2 @@
+<label>date
+   <input type="text" name="title" value="<?php echo date('Y-m-d'); ?>"></label>
