@@ -1,0 +1,23 @@
+// QUERY
+
+<?php 
+      $tag = $_GET["tag"];
+    
+
+	$sql = "select * from blogs where tag = '$tag' " ;
+    
+    $rs = mysqli_query($connect, $sql);
+	//get row
+	$fetchRow = mysqli_fetch_assoc($rs);
+?>  
+
+//RESULT
+<?php
+                          while($fetchRow = mysqli_fetch_assoc($rs)) {
+                              echo '<tr>';
+    echo '<td> '.$fetchRow['tag'].'</td>'; 
+    echo '<td> '.$fetchRow['blogName'].'</td>';
+    
+    echo ' </tr> ';
+                          } 
+                          ?>
