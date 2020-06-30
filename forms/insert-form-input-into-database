@@ -1,0 +1,23 @@
+<?php
+	// Check For form Submit
+	if(isset($_POST['submit'])){
+		// Get form field data and assign to a variable
+		$blogName = mysqli_real_escape_string($connect, $_POST['blogName']);
+        $precis = mysqli_real_escape_string($connect, $_POST['precis']);
+		$content = mysqli_real_escape_string($connect, $_POST['content']);
+        $category = mysqli_real_escape_string($connect, $_POST['category']);
+         $tag = mysqli_real_escape_string($connect, $_POST['taglist']);
+		$author = mysqli_real_escape_string($connect, $_POST['author']);
+        $date = mysqli_real_escape_string($connect, $_POST['date']);
+
+     //insert into database fields the value of the variables
+		$query = "INSERT INTO blogs(blogName, author,content, precis, category, tag, date) VALUES('$blogName', '$author', '$content', '$precis', '$category', '$tag', '$date')";
+
+      // if the query was succesful confirm or give error message
+		if(mysqli_query($connect, $query)){
+			$status = 'You have successfully created an article titled - ' .$blogName. ' published on ' .$date;
+                                              		} else {
+			$statusErr = 'ERROR: '. mysqli_error($connect);
+		}
+	}
+?>
