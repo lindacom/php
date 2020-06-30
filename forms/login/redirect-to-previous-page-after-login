@@ -6,6 +6,7 @@
         echo '<script>alert("you must be logged in ")</script>';
         $_SESSION['loggedin'] = $_SERVER['REQUEST_URI']; 
         header("location: login.php?location=" . urlencode($_SERVER['REQUEST_URI']));
+        //  header("location: login.php?location=" . urlencode($_SERVER['REQUEST_URI']).$_SERVER['QUERY_STRING']); //sends the current url with the query parameters
         exit; 
     }
     ?>
@@ -13,12 +14,22 @@
 // LOGIN CHECKING PAGE - After login checks session is set to true and user is redirected back to the url contained in the logged in session with the username appended to the url.
 
 <?php
-    $_SESSION["username"] = true;
+  if(isset($username)) {
+    $url = $_SESSION['loggedin'];
+         $queryb = parse_url($url, PHP_URL_QUERY);
     
-    if(isset($username)) {
-           header('Location:' .$_SESSION['loggedin'].'?username=' .$_SESSION['user_name']);       
+   
+    if ($queryb) {
+        $url .= "&username=" .$_SESSION['user_name'];
+    } else {
+        $url .= "?username=" .$_SESSION['user_name'];
+    }
+       
+          header('Location:'.$url); 
+          
         } else {
-            header('Location:login.php');
-     }
+            header('Location: http://lindacom.infinityfreeapp.com/articles/index.php');
+ 
+      }
      
      ?>
