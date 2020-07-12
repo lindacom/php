@@ -1,0 +1,9 @@
+<?php
+// do check to see if user logged in
+if (!isset($_SESSION["customer"])) {
+  //  echo '<script>alert("you must be logged in ")</script>';
+    $_SESSION['customerloggedin'] = $_SERVER['REQUEST_URI']; // Note: $_SERVER['REQUEST_URI'] is your current page which will be returned back in the session when logged in
+    header("location: shoppinglogin.php?location=" . urlencode($_SERVER['REQUEST_URI']));
+    exit; // prevent further execution, should there be more code that follows
+}
+?>
