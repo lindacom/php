@@ -1,0 +1,5 @@
+redirect to session variable
+header('Location:http://lindacom.infinityfreeapp.com/books/myaccount.php?username=' .$_SESSION['user_name']);
+
+button to session variable
+<a href="<?php echo 'store.php?customer=' .$_SESSION["customer"] ;?> " class="button secondary" type="submit" name="basket" id="basket">My basket</a>
