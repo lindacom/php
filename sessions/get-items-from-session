@@ -1,0 +1,33 @@
+if(isset($_GET['title']) && $_GET['title'] !== ""){
+      if(isset($_SESSION["cart"]))  
+      {  
+           $item_array_id = array_column($_SESSION["cart"], "item_id");  
+           if(!in_array($_GET["id"], $item_array_id))  
+           {  
+                $count = count($_SESSION["cart"]);  
+                $item_array = array(  
+                     'item_id'               =>     $_GET["id"],
+                   'item_name' =>     $_GET["title"], 
+                    'item_price'          =>    $_GET["price"], 
+                     'item_quantity'          =>     $_GET["quantity"]
+                );  
+                $_SESSION["cart"][$count] = $item_array;  
+           }  
+           else  
+           {  
+                echo '<script>alert("Item Already Added")</script>';  
+                echo '<script>window.location="librarysearch.php"</script>';  
+           }  
+      }  
+      else  
+      {  
+           $item_array = array(  
+                'item_id'               =>     $_GET["id"],
+                   'item_name' =>     $_GET["title"], 
+                    'item_price'          =>    $_GET["price"], 
+                     'item_quantity'          =>     $_GET["quantity"]
+           );  
+           $_SESSION["cart"][0] = $item_array;  
+      } 
+     
+ }
