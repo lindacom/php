@@ -1,0 +1,7 @@
+  if(isset($_GET['title']) && $_GET['title'] !== ""){
+        if(!isset($_SESSION['cart']) && !is_array($_SESSION['cart'])){
+            $_SESSION['cart'] = array();
+        } 
+//push item from url into session
+array_push($_SESSION['cart'], $_GET['title']);
+}
