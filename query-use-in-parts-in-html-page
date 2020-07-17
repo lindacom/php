@@ -1,0 +1,16 @@
+<?php
+// do check to see if user logged in and get their contact details
+if (isset($_SESSION["customer"])) {
+  $customer = $_SESSION['customer'];
+       
+        $stmt= "SELECT * FROM tbl_customer WHERE CustomerName = '$customer' ";
+$result = $connect->query($stmt);
+
+$fetchRow = mysqli_fetch_assoc($result);
+
+$connect->close();
+}
+?>
+
+// echo the fields where required
+<?php echo $fetchRow['fullName']?>
