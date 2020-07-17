@@ -4,6 +4,8 @@ Form data
 Both GET and POST create an array (e.g. array( key1 => value1, key2 => value2, key3 => value3, ...)). 
 This array holds key/value pairs, where keys are the names of the form controls and values are the input data from the user.
 
+Use mysqli_real_escape_string to clean form input before inserting into a database.
+
 Form buttons
 =============
 Reset button
