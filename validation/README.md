@@ -23,3 +23,8 @@ if (empty($_POST["cardnumber"])) {
 }
   }  
   ```
+  
+  Get a user's IP address
+  ------------------------
+  
+  $SERVER['REMOTE_ADDR']
