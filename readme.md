@@ -29,12 +29,12 @@ mysqli_fetch_row - brings back data as an array
 mysqli_fetch_assoc - brings back data as an associative array (brings back labels so you can use column names as keys). 
 N.b. this method is a bit slower than the fetch row method
 
-mysqli_fetch_array - returns both of the about but you can specify that you want one particular type (row or assoc) of aray
+mysqli_fetch_array - returns both of the about but you can specify that you want one particular type (row or assoc) of array
 
-preventing sql injection
+Preventing sql injection
 ==========================
 
-sanitize data
+Sanitize data
 
 manual method - add backslash before single quotes
 dynamic method - use mysqli_real_escape_string ($db, $string) only available when connected to the database.
