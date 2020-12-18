@@ -1,3 +1,61 @@
+Arrays and loops
+================
+e.g. data submitted from a form is displayed as an array.
+
+Create an array
+---------------
+To create an indexed array:
+$flowers = array('tulips', 'roses', 'daffodils', 'orchids');
+
+To create an associative array (key and value):
+$features = array(
+   'winter' => 'it's winter',
+   'spring' => 'it's spring',
+   'summer' => 'it's summer'
+   );
+
+Php does not autoatically convert arrays to strings.  You need to use the implode() passing in two arguments - seperator and array name.
+
+<?php echo implode (', ', $flowers); ?>
+
+Loop through array
+--------------------
+
+Use for each loop to loop through items in an array.
+
+foreach($flowers AS $flower) {
+echo '<li>' . $flower . '</li>'
+}
+
+To omit an item from the loop use an if statement in the for each loop and continue
+
+if ($flower == 'daffodils') {
+continue;
+}
+
+Loop through associative array
+-------------------------------
+
+Display values:
+foreach($features AS $feature) {
+echo '<p>$feature</p>';
+}
+
+Display key and value
+foreach($features AS $key => $value) {
+echo '<p>$key $value</p>'
+}
+
+Find an element in an array
+-----------------------------
+
+Use the in_array() passing in variabl and array
+
+$order = 'daffodils';
+if (in_array($order, $flowers)) {
+
+}
+
 Display default image if no image exists in db
 ==============================================
 
