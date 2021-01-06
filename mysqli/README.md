@@ -59,6 +59,18 @@ The real_query() method subites the query (only returns true or false). You need
 
 N.b. real_query() is unbuffered meaning results sit on the server therefore you cannot find out how many rows are in the query.
 
+Multiple queries
+-----------------
+1. Create queries sparated by ;
+2. Submit query using multi_query() method on the database object
+3. Create a do while loop
+
+In the do condition store the result using the store_result() method. Free the memory associated with the rsult using the free() method
+
+In the while condition check if there are any more results using the next_result() method on the database object
+
+N.b. multi query method does not support prepared statements.
+
 Transaction
 --------------
 A transaction allows you to treat a series of sql queries as a single unit that is executed only if all parts of it succeed.
