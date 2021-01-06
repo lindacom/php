@@ -90,6 +90,45 @@ Display default image if no image exists in db
     <img src="http://placehold.it/400x250/000/fff" width="250px"/>
   </object>
 
+Using Modulo to display database item equally on page
+=====================================================
+
+e.g. finding every fourth item. Using modulo division to establish a repeating series e.g. total items are diisible y four. When loop runs the first time the counter
+is zero. Increase the counter after every loop
+
+1. Set counter to 0
+2. Begin loop - if counter divisible by 4 =0 add block of code
+increase the counter by one
+if counter is divisible by 4 = 0 add closing tags
+
+```
+<?php
+$number = 5;
+?>
+
+<?php if ($number %4 === 0 ) {
+echo "$number is zero or equally divisible by 4";
+$number ++;
+if ($number % 4 === 0) {
+?>
+
+</ul>
+</div>
+
+<?php 
+}
+?>
+
+} else {
+echo "number is not equally divisable by 4";
+}
+?>
+
+N.b. conter will only be divisable by four at the end of the forth loop
+
+The advantabe of using this ethod is that it allows you to perform one operation at the beginning of the sequenc and a different one at the end.
+
+
 VALIDATING DATA (E.G. FORMS)
 ============================
 
