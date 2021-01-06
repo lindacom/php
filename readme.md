@@ -1,10 +1,37 @@
+Working with files
+===================
+
+Get filename
+--------------
+Get part of filename (e.g. colour) ad display on a webpage
+
+$filename = 01_flower_green.jpg
+
+```
+function getColor($filename) {
+// separate filename by _ symbol
+$parts - explode ('_', $filename);
+// return position three and format first letter in uppercase
+return ucfirst($parts[2]);
+```
+
+To display part of the filename
+
+```
+if (isset($color[$flowername])) {
+echo getColor($color[$flowername])
+}
+```
+
+
+
 Arrays and loops
 ================
 e.g. data submitted from a form is displayed as an array.
 
 Create an array
 ---------------
-To create an indexed array:
+To create an indexed array;
 $flowers = array('tulips', 'roses', 'daffodils', 'orchids');
 
 To create an associative array (key and value):
