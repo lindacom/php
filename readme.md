@@ -1,3 +1,22 @@
+Working with dates
+===================
+Set future dates
+----------------
+Set a future date to store in the database e.g. membership expiry date
+
+// date 12 months from today
+$date = (new DateTime('+ 12 months'))->format('Y-m-d');
+
+// last day of the month 12 months from today
+$date = (new DateTime('last day of this month + 12 months'))->format('Y-m-d');
+
+$date = (new DateTime('second Monday of October 2020'))->format('Y-m-d');
+
+echo $date;
+
+
+
+
 Working with files
 ===================
 
