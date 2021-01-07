@@ -82,7 +82,31 @@ A transaction allows you to treat a series of sql queries as a single unit that 
 A. If it fails (1) roll back transaction using the database object
 B. If it succeeds (0)continue and commit to complete transaction.
 
+Remove dupicate field data from result table
+---------------------------------------------
+If database column fields have duplicate entries (e.g. make of car) then don't display the name again
+
+```
+<?php
+$previous = '';
+foreach ($db->query($cars) as $row) { ?>
+<tr>
+<?php if ($previous == $row['make']){
+echo '<td>&nbsp;</td>;
+} else { ?>
+<td><?= $row['make']; ?> </td>
+<?php } ?>
+<td>$<?= $row['priceF'[; ?></td>
+<td><?= $row['description']; ?></td>
+</tr>
+<?php $previous = $row['make'];
+} ?>
+
+```
+
 Mysqli error messages
 ----------------------
 Query method stored errors are stored in the database connection object.
 Prepared statement method the statement object has its own error properties.
+
+
