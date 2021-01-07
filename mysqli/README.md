@@ -82,15 +82,23 @@ A transaction allows you to treat a series of sql queries as a single unit that 
 A. If it fails (1) roll back transaction using the database object
 B. If it succeeds (0)continue and commit to complete transaction.
 
+Working with database results
+================================
+
 Remove dupicate field data from result table
 ---------------------------------------------
-If database column fields have duplicate entries (e.g. make of car) then don't display the name again
+If database row have duplicate entries (e.g. make of car) then don't display the name again
 
 ```
 <?php
+// create variable to store the previous value
 $previous = '';
+
 foreach ($db->query($cars) as $row) { ?>
 <tr>
+
+// compare the row value with the variable value if different then display it
+
 <?php if ($previous == $row['make']){
 echo '<td>&nbsp;</td>;
 } else { ?>
@@ -99,6 +107,8 @@ echo '<td>&nbsp;</td>;
 <td>$<?= $row['priceF'[; ?></td>
 <td><?= $row['description']; ?></td>
 </tr>
+
+// assign curret value to the variable that stores the one from the previous row
 <?php $previous = $row['make'];
 } ?>
 
