@@ -34,10 +34,20 @@ This way, the user will get error messages on the same page as the form.:
 
 Password hashing
 ----------------
-1. In the database set up a password colu varchars(255). N.b. hashed password length is much longer than the original password so the field needs to be big
-2. Create a form - encrypt the pasword using the password_hash($-POST['password'], PASSWORD DEFAULT = 1);
+
+Using the php password hashing api
+
+Set up database:
+1. In the database set up a password column varchars(255). N.b. hashed password length is much longer than the original password so the field needs to be big
+
+Create a form:
+2. Create a form - encrypt the pasword using the password_hash() method - e.g. $encrypted = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+Retrieve stored password from the database:
 3. query the database - Select user where username matches
-4. use password_verify() function to make sure password atches (true or false)
+
+Test the retrieved pasword against the submitted password:
+4. use password_verify() function to make sure password matches (returns true or false) - e.g. password_verify($submitted_pwd, $stored_pwd);
 5. Store a session variable
 6. redirect to previous page
 
