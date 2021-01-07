@@ -20,7 +20,7 @@ Submit button
 ```
 
 Form security
---------------
+==============
 
 The htmlspecialchars() function converts special characters to HTML entities.This prevents attackers from exploiting the code by injecting HTML or Javascript code (Cross-site Scripting attacks) in forms.
 
@@ -31,6 +31,15 @@ This way, the user will get error messages on the same page as the form.:
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
 ```
+
+Password hashing
+----------------
+1. In the database set up a password colu varchars(255). N.b. hashed password length is much longer than the original password so the field needs to be big
+2. Create a form - encrypt the pasword using the password_hash($-POST['password'], PASSWORD DEFAULT = 1);
+3. query the database - Select user where username matches
+4. use password_verify() function to make sure password atches (true or false)
+5. Store a session variable
+6. redirect to previous page
 
 Required fields
 ===============
