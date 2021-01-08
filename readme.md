@@ -36,6 +36,20 @@ $now = nw DateTime();
 if ($date->diff($now)->days > 182) {
 }
 
+Working with numbers
+====================
+Get the average using php built in function
+
+function average ($vals) {
+// get the arguments as an array
+$vals = func_get_args();
+// get the nuber of argumets
+$count = func_num_args();
+// calculate the average to one decimal point
+return round(array_sum($vals)/$count, 1);
+}
+
+echo average(2, 4, 6, 8);
 
 Working with files
 ===================
