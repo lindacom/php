@@ -10,6 +10,10 @@ error_reporting(E_ALL);
 ?> 
 ```
 
+Alerts
+=======
+echo '<script>alert("Item Already Added")</script>'; 
+
 Working with dates
 ===================
 Set future dates
