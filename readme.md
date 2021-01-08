@@ -41,7 +41,13 @@ if (isset($color[$flowername])) {
 echo getColor($color[$flowername])
 }
 ```
+List files in a directory
+-------------------------
+$files = scandir('files'):
 
+foreach ($files as $file) {
+echo $file . '<br>';
+}
 
 
 Arrays and loops
