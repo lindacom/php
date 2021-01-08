@@ -44,12 +44,15 @@ echo getColor($color[$flowername])
 List files in a directory
 -------------------------
 $files = scandir('files'):
+$now = new DateTime();
 
 foreach ($files as $file) {
+$modified = new DateTime('@' .$file->getMTime())
 echo $file . '<br>';
 }
 
-
+N.b instead of using scandir you could use new FilesystemIterator which returns the full file path and returns the result as a string object. use $file->getFilename() to get 
+just the filename without the path.
 Arrays and loops
 ================
 e.g. data submitted from a form is displayed as an array.
