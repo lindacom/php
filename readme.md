@@ -26,7 +26,15 @@ $date = (new DateTime('second Monday of October 2020'))->format('Y-m-d');
 
 echo $date;
 
+Working with time
+===================
+Find whether date is more than six months old
 
+$date = '';
+$now = nw DateTime();
+
+if ($date->diff($now)->days > 182) {
+}
 
 
 Working with files
