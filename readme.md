@@ -1,3 +1,15 @@
+Displaying errors
+=================
+Put the following code at the top of the php file to display errors
+
+```
+ <?php 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+?> 
+```
+
 Working with dates
 ===================
 Set future dates
@@ -151,6 +163,7 @@ if ($number % 4 === 0) {
 echo "number is not equally divisable by 4";
 }
 ?>
+```
 
 N.b. conter will only be divisable by four at the end of the forth loop
 
