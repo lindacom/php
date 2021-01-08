@@ -39,7 +39,7 @@ if ($date->diff($now)->days > 182) {
 Working with numbers
 ====================
 Get the average using php built in function
-
+```
 function average ($vals) {
 // get the arguments as an array
 $vals = func_get_args();
@@ -50,6 +50,13 @@ return round(array_sum($vals)/$count, 1);
 }
 
 echo average(2, 4, 6, 8);
+```
+
+Generate a random number between two sets of numbers
+
+```
+<?php echo random_int(1, 50); ?>
+```
 
 Working with files
 ===================
@@ -229,4 +236,10 @@ Sanitize data
 
 manual method - add backslash before single quotes
 dynamic method - use mysqli_real_escape_string ($db, $string) only available when connected to the database.
+
+Random token
+-------------
+generate 32 character random token.  N. string is always twice the length of bytes specified in random_bytes
+
+<?php echo bin2hex(random_bytes(16))?>
 
