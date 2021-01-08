@@ -62,7 +62,7 @@ $now = new DateTime();
 
 foreach ($files as $file) {
 $modified = new DateTime('@' .$file->getMTime())
-echo $file . '<br>';
+echo $file . ': ' .$modified->format('F j, Y;) . '<br>';
 }
 ```
 
