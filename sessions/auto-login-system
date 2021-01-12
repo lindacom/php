@@ -1,0 +1,10 @@
+Extend the mysql class handler with another class called persistent session handler - mysessionhandler.php
+create a class called autologin. Sets days sesion persists. Default settings for cookie - autologin.php
+Use a trait called persistent properties - properties and methods for reuse in other classes - persistentsessionhandler.php
+
+This file contains details of:
+
+session name
+database tables (sessions, users, autologin)
+column names
+session variables for the persistent and session handler and autologin classes
