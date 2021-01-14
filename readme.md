@@ -269,3 +269,15 @@ Using php database class
 ====================
 Use a database class that can be reused when inserting, updating or deleting data in a database table.
 
+Display username from session
+=============================
+
+```
+ <?php 
+    if(isset($_SESSION['user_name'])) { 
+        echo 'Welcome &nbsp';
+        echo $_SESSION['user_name'];
+    }
+    ?>
+```
+
