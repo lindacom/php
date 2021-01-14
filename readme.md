@@ -247,3 +247,7 @@ generate 32 character random token.  N. string is always twice the length of byt
 
 <?php echo bin2hex(random_bytes(16))?>
 
+Using php database class
+====================
+Use a database class that can be reused when inserting, updating or deleting data in a database table.
+
