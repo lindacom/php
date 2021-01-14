@@ -110,31 +110,45 @@ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 3. store session data and session id in the database
 
 Steps:
-Opening and reading session - start transaction (or apply advisory lock), read/write data, commit and close. N.b. database can either use transactions
+
+1. Opening and reading session - start transaction (or apply advisory lock), read/write data, commit and close. N.b. database can either use transactions
 or an advisory lock using getLock() method and initialise method.
-Writing session data
-Closing session and garbage collection
-Destroy session
+2. Writing session data
+3. Closing session and garbage collection
+4. Destroy session
 
 In a file:
-Import session handler class
-Require db connection file
-require session handler definition file - Create a class that implements the session handler interface. N.b. locking chords when read or written to.
-Define sesion handler methods = functions tell php what to do when session is opened, closed, read or written, how to destroy a session or garbage colect.
-You can also define how to set session ID Pass these functions as arguments to session set_save_handler.
-Create a new instance of session handler passing in db object as prametr
-Pass the new instance to session_set_save_handler(); - this tells php to store session data in database.
 
-4. If user wants to be remembered, generate single use token to identify user on return
-5. Store the token in a cookie in the user's browser. N.b. this cookie is seperate from the session cookie and will have a longer lifetime.
-6. store the token, date and user's data in the database
-7. On return, check the token stored in the user's browser. If valid, import the user's data into a new session without the need to log in.
+1. Import session handler class
+2. Require db connection file
+3. require session handler definition file - Create a class that implements the session handler interface. N.b. locking chords when read or written to.
+4. Define sesion handler methods = functions tell php what to do when session is opened, closed, read or written, how to destroy a session or garbage colect.
+You can also define how to set session ID Pass these functions as arguments to session set_save_handler.
+5. Create a new instance of session handler passing in db object as prametr
+6. Pass the new instance to session_set_save_handler(); - this tells php to store session data in database.
+
+7. If user wants to be remembered, generate single use token to identify user on return
+8. Store the token in a cookie in the user's browser. N.b. this cookie is seperate from the session cookie and will have a longer lifetime.
+9. store the token, date and user's data in the database
+10. On return, check the token stored in the user's browser. If valid, import the user's data into a new session without the need to log in.
 
 N.b. using same session id for a long period is insecure as the session can be stolen.
 
-N.b. becaus the token is single use it's makred in the database as used.  A new token is generated and stored as a cookie in the user's browser. 
+N.b. because the token is single use it's marked in the database as used.  A new token is generated and stored as a cookie in the user's browser. 
 If no token is detected user is asked to login.
 
 Increase value of session.cookie_lifetime and session.gc_maxlifetime
+
 Use secure one time hash key as autologin key using cookie.
+
+Using session handler
+---------------------
+Use php built in function session_set_save_handler
+
+Seee documentation php.net/manual/en/function.session-set-save-handler.php
+
+Tutorials
+==========
+
+PDO session handler - youtube.com/watch?v=5wZWyLE4xlc
 
