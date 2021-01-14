@@ -30,6 +30,24 @@ $date = (new DateTime('second Monday of October 2020'))->format('Y-m-d');
 
 echo $date;
 
+```
+ <?php
+$hour = date("H:i:sa"); // set the time (hour, minues, seconds, am/pm) as variable
+echo "Today is " . date("d/m/Y") . "<br>"; // date, month, year separated by /
+date_default_timezone_set("Europe/London");
+echo "The time is " . $hour;
+
+// if the time is after 5am and before 12pm, else if time after 12pm and before 6pm else another statemet
+if ($hour > 5 && $hour <12) { ?>
+<p>Good morning.</p>
+<?php } elseif ($hour >=12 && $hour < 18) { ?>
+<p>Good afternoon.</p>
+<?php } else { ?>
+<p>The library is closed.  Go home!</p>
+<?php } 
+?>
+```
+
 Working with time
 ===================
 Find whether date is more than six months old
