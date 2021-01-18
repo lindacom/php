@@ -20,15 +20,18 @@ Set future dates
 ----------------
 Set a future date to store in the database e.g. membership expiry date
 
+```
 // date 12 months from today
 $date = (new DateTime('+ 12 months'))->format('Y-m-d');
-
+```
+```
 // last day of the month 12 months from today
 $date = (new DateTime('last day of this month + 12 months'))->format('Y-m-d');
 
 $date = (new DateTime('second Monday of October 2020'))->format('Y-m-d');
 
 echo $date;
+```
 
 ```
  <?php
@@ -46,6 +49,11 @@ if ($hour > 5 && $hour <12) { ?>
 <p>The library is closed.  Go home!</p>
 <?php } 
 ?>
+```
+
+Two days from today
+```<?php $date = strtotime("+2 day");
+echo date('D M d Y', $date);?>
 ```
 
 Working with time
