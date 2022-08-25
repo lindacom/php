@@ -23,11 +23,11 @@ Time conditionals
 --------------------------
 
 ```
-<?php if ($hour > 5 || $hour <12) { ?>
+<?php if ($hour > 5 && $hour <12) { ?>
 <p>Good morning. </p>
-<?php } elseif ($hour >=12 || $hour < 18) { ?>
+<?php } elseif ($hour >=12 && $hour < 18) { ?>
 <p>Good afternoon. </p>
-<?php else ($hour >=18 || $hour < 23) { ?>
+<?php else ($hour >=18 && $hour < 23) { ?>
 <p>Good evening</p>
 <?php } ?>
 ```
