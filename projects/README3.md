@@ -84,7 +84,12 @@ Labelling array elements
 Instead of using keys you can assign a label to an array value
 
 ```
+
 $features = array(
  'winter' => 'This is the cold season'
  );
+ 
+ ```
+ ```
+ <?php echo $features['winter']; ?>
  ```
