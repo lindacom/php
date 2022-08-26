@@ -93,6 +93,7 @@ $features = array(
  ```
  <?php echo $features['winter']; ?>
  ```
+ To use an associative array in a double quoted string you need to wrap it in a pair of curly braces.
  ```
  <?php echo "The tagline for wintr is : {$fatures['winter']}"; ?>
  ```
