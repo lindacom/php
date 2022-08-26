@@ -97,3 +97,12 @@ $features = array(
  ```
  <?php echo "The tagline for wintr is : {$fatures['winter']}"; ?>
  ```
+ Display keys and values
+ -------------------------
+ ```
+ <?php
+ foreach ($features AS $key => $value) {
+    echo "<p>The caption for the $key feature is: $value</p>";
+    }
+ ?>
+ ```
