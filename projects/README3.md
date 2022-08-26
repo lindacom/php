@@ -61,7 +61,7 @@ display array as a comma seperated list
 ----------------------------------------
 
 ```
-<?php echo implode ($flowers); ?>
+<?php echo implode (',' , $flowers); ?>
 ```
 
 get specific element in an array
