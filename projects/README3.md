@@ -69,3 +69,13 @@ get specific element in an array
 ```
 <?php echo $flowers[3]; ?>
 ```
+Loop through an array
+----------------------
+Foreach loops are designed specifically to work with arrays.
+
+```
+<?php foreach ($flowers AS $flower) {
+   echo '<li>' . $flower . '</li>';
+   }
+   ?>
+```
