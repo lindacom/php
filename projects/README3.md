@@ -106,3 +106,4 @@ $features = array(
     }
  ?>
  ```
+ N.b. if you only want to display the key you do this in the same way and just ignore the value.
