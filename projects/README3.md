@@ -48,3 +48,11 @@ Add items to an array
 ```
 $flowers[] = 'irises';
 ```
+
+print elements of an array
+--------------------------
+```
+<pre>
+<?php print_r($flowers); ?>
+</pre>
+```
