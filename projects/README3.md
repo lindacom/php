@@ -120,3 +120,26 @@ $features = array(
 }
 ?>
 ```
+
+PHP forms
+============
+The $_POST variable uses the name attribute of form elements to create an array.
+
+Check if variable has been set
+------------------------------
+
+```
+<form>
+<p>
+<input type="submit" name="order" id="order" value="Order">
+<input type="hidden" name="price" id="price" value="3">
+</p>
+</form>
+
+<pre>
+<?php 
+if (isset($_POST['order'])) {
+  print_r($_POST)
+  }
+  ?>
+```
