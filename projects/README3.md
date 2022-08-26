@@ -31,3 +31,17 @@ Time conditionals
 <p>Good evening</p>
 <?php } ?>
 ```
+
+PHP arrays
+================
+Create an array
+---------------------
+```
+$flowers = array('tulips', 'roses', 'daffodils') or $flowers = ['tulips', 'roses', 'daffodils']
+```
+
+Add items to an array
+---------------------
+```
+$flowers[] = 'irises';
+```
