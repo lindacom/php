@@ -123,7 +123,7 @@ $features = array(
 
 PHP forms
 ============
-The $_POST variable uses the name attribute of form elements to create an array.
+The $_POST variable uses the name attribute of form elements to create an array. This is a PHP superglobal array (formated automatically)
 
 Check if variable has been set
 ------------------------------
