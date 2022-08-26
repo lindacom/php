@@ -107,3 +107,16 @@ $features = array(
  ?>
  ```
  N.b. if you only want to display the key you do this in the same way and just ignore the value.
+ 
+ Find if an element exists in an array
+ --------------------------------------
+ ```
+ <?php
+ $order = 'daffodils';
+ if (in_array($order, $flowers)) {
+     echo "<p>Yes, $order are in stock.</p>";
+      } else {
+         echo "<p>Sorry, o $order available.<p>";
+}
+?>
+```
