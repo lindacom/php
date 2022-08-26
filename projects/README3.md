@@ -79,3 +79,12 @@ Foreach loops are designed specifically to work with arrays.
    }
    ?>
 ```
+Labelling array elements
+------------------------------
+Instead of using keys you can assign a label to an array value
+
+```
+$features = array(
+ 'winter' => 'This is the cold season'
+ );
+ ```
