@@ -34,8 +34,11 @@ Time conditionals
 
 PHP arrays
 ================
+Input from form fields are saved as an array and rows in a database are also arrays.
+
 Create an array
 ---------------------
+You can create an array in two ways - either using the array keyword or using brackets.
 ```
 $flowers = array('tulips', 'roses', 'daffodils') or $flowers = ['tulips', 'roses', 'daffodils']
 ```
