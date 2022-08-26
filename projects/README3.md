@@ -49,10 +49,16 @@ Add items to an array
 $flowers[] = 'irises';
 ```
 
-print elements of an array
+print all elements of an array
 --------------------------
 ```
 <pre>
 <?php print_r($flowers); ?>
 </pre>
+```
+
+get specific element in an array
+---------------------------------
+```
+<?php echo $flowers[3]; ?>
 ```
