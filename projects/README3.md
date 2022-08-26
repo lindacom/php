@@ -129,7 +129,7 @@ Check if variable has been set
 ------------------------------
 
 ```
-<form>
+<form method="post">
 <p>
 <input type="submit" name="order" id="order" value="Order">
 <input type="hidden" name="price" id="price" value="3">
@@ -143,3 +143,28 @@ if (isset($_POST['order'])) {
   }
   ?>
 ```
+
+N.b. use the get form method to return the input field data as a query string in the url. php automatically creates an associative array called get 
+which uses the name attribute as they key for each array element of a form that has been submitted using the GET method.
+
+Retrieve values from a URL's query string
+-------------------------------------------
+
+```
+<form method="get">
+<p>
+<label for="searchterm">Find flowers:</label>
+<input type="search" name="searchterm" id="searchterm">
+<input type="submit" name="search" id="search" value="search">
+</p>
+</form>
+
+<pre>
+<?php 
+if (isset($_GET['searchterm'])) { ?>
+ <p>You searched for <?php echo $_GET['searchterm']; ?>.</p>
+ <?php }
+  ?>
+```
+
+N.b. the value is set even if it is empty.
