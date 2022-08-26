@@ -36,7 +36,7 @@ PHP arrays
 ================
 Input from form fields are saved as an array and rows in a database are also arrays.
 
-Create an array
+Create an array (indexed array)
 ---------------------
 You can create an array in two ways - either using the array keyword or using brackets.
 ```
@@ -69,7 +69,7 @@ get specific element in an array
 ```
 <?php echo $flowers[3]; ?>
 ```
-Loop through an array
+Loop through an array 
 ----------------------
 Foreach loops are designed specifically to work with arrays.
 
@@ -79,9 +79,9 @@ Foreach loops are designed specifically to work with arrays.
    }
    ?>
 ```
-Labelling array elements
+Labelling array elements (associative array)
 ------------------------------
-Instead of using keys you can assign a label to an array value
+Instead of using keys you can assign a label to an array value. The advantage is that it is easier to select the element you want.
 
 ```
 
@@ -92,4 +92,7 @@ $features = array(
  ```
  ```
  <?php echo $features['winter']; ?>
+ ```
+ ```
+ <?php echo "The tagline for wintr is : {$fatures['winter']}"; ?>
  ```
