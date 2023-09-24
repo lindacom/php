@@ -1,0 +1,28 @@
+
+
+<style>
+#footer {
+display: none;
+}
+</style>
+
+<script>
+window.onscroll = function() {
+scrollReaction();
+}
+
+function scrollReaction() {
+var content_height = container.offsetHeight;
+var current_y = window.innerHeight + window.pageYOffset;
+if(current_y >= content_height) {
+showFooter();
+}
+}
+
+
+
+function showFooter() {
+var foot = document.getElementById("fffooter");
+foot.style.display = 'block';
+}
+</script>

@@ -1,0 +1,120 @@
+<?php
+session_start();
+?>
+<!-- signup connection to database and insert post values--> 
+<?php
+include 'db.php';
+// define variables and set to empty values
+
+$username = $email = $password = "";
+$usernameErr = $usernameErr2 = $emailErr = $passwordErr2 = $passwordErr = $mainErr = "";
+
+$usernamelength= strlen($username);
+$passwordlength= strlen($password);
+
+
+    if(isset($_POST['Signup'])) {
+  
+  if (empty($_POST["txtsuuser"])) {
+    $usernameErr = "Name is required";
+      } 
+   else {
+    $username = test_input($_POST["txtsuuser"]);
+     // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$username)) {
+      $usernameErr = "Only letters and white space allowed";
+    }
+    if ($usernamelength < 6){
+     $usernameErr2 = "Username must be at least 6 characters";
+}
+  
+  }
+
+if (empty($_POST["txtsuemail"])) {
+     $emailErr = "Email is required";
+      } 
+   else {
+  $email = test_input($_POST["txtsuemail"]);
+   // check if email is correctly formatted
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  $emailErr = "Invalid email format";
+}
+   }
+
+  if (empty($_POST["txtsupass"])) {
+    $passwordErr = "password is required";
+    } else {
+    $password = test_input($_POST["txtsupass"]);
+     // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$password)) {
+      $passwordErr = "Only letters and white space allowed";
+    }
+      if ($passwordlength < 6){
+     $passwordErr2 = "Username must be at least 6 characters";
+}
+   
+  }
+
+  $username = $_POST['txtsuuser']; //txtuser is the name in the form field
+  $email = $_POST['txtsuemail']; //txtpass is the name in the form field
+$password = $_POST['txtsupass']; //txtpass is the name in the form field
+
+
+// TO DO: using stmt bind parameter here instead would be more secure
+   
+    $checkuser = "INSERT INTO blogusers (user_name, user_email, user_password) VALUES ($username, $email, $password)";
+
+$run = mysqli_query($connect, $checkuser);
+
+   /* //set the session with the name user_name 
+$_SESSION["username"] = true; // this will then accept the login when redirecting to previous page
+$_SESSION['user_name'] = $username;
+
+// setting session start and expire times 10 minutes
+
+ $_SESSION['start'] = time(); // Taking now logged in time.
+            // Ending a session in 30 minutes from the starting time.
+            $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);*/
+
+            } else {
+    $mainErr = "Username and/or password do not match! Try again!";
+
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+  checkuser($data);
+}
+
+
+
+
+?>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+

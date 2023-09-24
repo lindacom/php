@@ -1,0 +1,78 @@
+account label lindacom.infinityfreeapp.com
+
+account password leader01
+
+---
+
+Username and ftp username epiz_21113631
+
+ftp host name ftp.epizy.com
+
+-----
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <section class="content">
+
+ </section>
+        </div>
+    </div>
+</div>
+
+-------
+
+<span class="glyphicon glyphicon-chevron-right"></span>
+
+<?php include 'nav.php';
+?>
+
+-----
+
+sub footer
+
+  <!-- Begin pattern: form banner //-->
+<div class="form-banner sta-dkgreen">
+    <div class="container dpl-form">
+        <div class="row">
+            
+                
+                
+                <div class="col-md-6">
+                    <h3>Interested in learning more?</h3>
+                    <p>Subscribe to receive important information about <a href="books/displaybooks.php"> leadership books </a></p>
+                                      
+                </div>
+                
+<div class="col-md-6">
+                   <h3>Got something to say?</h3>
+                    <p>Write a blog post </p>
+                                            </div>
+                    
+</div>
+                   
+                </div>
+                
+                </div>   
+   
+
+<!-- End pattern: form banner //-->   
+
+---------------------
+
+BOOKS
+
+<h2>Recommended reading</h2>
+<h3>Research</h3>
+
+<ul>
+<li>Louise Morley research</li>
+<li>Women find your voice, Heath, Flynn and Davis-Holt harvard business review
+</ul>
+
+<h3>Books</h3>
+<ul>
+<li>Quiet, Susan Caine</li>
+<li>A-Z of being understood, Ray White</li>
+<li>Out of women's experience, Brooks and Regan</li>
+<li>Fire well</li>
+</ul>

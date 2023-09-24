@@ -1,0 +1,9 @@
+<button id="add_to_cart">Click me to change the text<button>
+
+<div id="firstDiv">No items in shopping cart<div>
+
+<script>
+document.getElementById("add_to_cart").onclick = function () {
+  document.getElementById("firstDiv").innerHTML = "One item in cart"
+}
+</script>

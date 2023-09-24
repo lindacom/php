@@ -1,0 +1,41 @@
+.pop-content {
+
+	height: auto;
+
+	width: 200px;
+
+	background: #000;
+
+	color: #fff;
+
+	position: fixed;
+
+	bottom: 60px;
+
+	right: 20px;
+
+	display: none;
+
+}
+
+.feedback {
+  background-color : #31B0D5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
+}
+
+#mybutton {
+  position: fixed;
+  bottom: -4px;
+  right: 10px;
+}
+
+.panel-default>.panel-heading {
+background-color: black;
+}
+
+.well well-sm  {
+  background-color : #31B0D5;
+}

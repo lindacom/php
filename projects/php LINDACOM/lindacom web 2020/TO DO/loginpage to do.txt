@@ -1,0 +1,34 @@
+Form token - set csrf 
+
+
+
+Login form
+------------
+Add failed login attempts to database. See also throttling
+
+Password reset token email url contains token
+
+Prevent changes to logged in url
+
+Prevent logging in with two accouts open (show message already logged in)
+
+Sign up form
+-------------
+
+password input validator (set length)
+Show password strength indicator
+
+Encrypt password in database (one way encryption) and salt string 
+
+Show message success when account created.
+
+Customer account page
+---------------------- 
+
+User account image upload (set quantity, file type, file size, sanitise filename by changing to user name) 
+------
+shopping cart page - payment button require login before processing form. Disable form fields on access.
+==========
+Session - expire - put code on every page 
+
+session reset 

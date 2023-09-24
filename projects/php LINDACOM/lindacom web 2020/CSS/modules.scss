@@ -1,0 +1,848 @@
+/* web colour pallette
+
+https://coolors.co/cfdbd5-e8eddf-f5cb5c-242423-333533 */
+
+/* CSS Variables */
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+  --darkgrey: #CFDBD5;
+  --lightgrey: #E8EDDF;
+  --yellow: #F5CB5C;
+  --black: #242423;
+  --blackgrey: #333533;
+}
+
+/* ****************************************************************************
+ORBIT SLIDESHOW
+**************************************************************************** */
+.panel-heading uppercase {
+background-color: #044d48;
+}
+
+.docs-example-orbit-slide {
+  padding: 2rem 4rem;
+  color: $white;
+
+  .orbit-slide:nth-of-type(1) & {
+    background: dodgerblue;
+  }
+
+  .orbit-slide:nth-of-type(2) & {
+    background: rebeccapurple;
+  }
+
+  .orbit-slide:nth-of-type(3) & {
+    background: darkgoldenrod;
+  }
+
+  .orbit-slide:nth-of-type(4) & {
+    background: lightseagreen;
+  }
+}
+
+
+}
+
+.float-center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ****************************************************************************
+BOOKS LIBRARY TOP CONTAINER - HOLDS THE ORBIT CAROUSEL AND TWO SIDE BOXES
+**************************************************************************** */
+
+/* featured books slideshow container */
+
+.showcase {
+  grid-area: showcase;
+  min-height: 400px;
+  background:var(--yellow);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: var(--light);
+}
+
+.showcase h1 {
+    font-size: 2.5rem;
+  }
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light);
+}
+
+
+/* top container and boxes */
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+
+.top-box {
+  background: var(--lightgrey);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+}
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+/* ****************************************************************************
+
+BOOKS LIBRARY  4 COLUMN CARD GRID 
+
+**************************************************************************** */
+
+/* ****************************************************************************
+
+Boxes 
+
+**************************************************************************** */
+
+ 
+.boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.box {
+
+  background: E8EDDF;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+position: relative;
+ overflow: hidden;
+
+
+}
+
+.box .button {
+position: absolute;
+right:    0;
+bottom:   0;
+}
+
+/* ****************************************************************************
+
+Promo boxes
+
+**************************************************************************** */
+
+
+
+.promo-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+/* ****************************************************************************
+
+Bestseller boxes
+
+**************************************************************************** */
+
+.bestseller-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+
+/* ****************************************************************************
+SHOPPING CART BOXES
+
+**************************************************************************** */
+.cartboxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+}
+
+.cartbox {
+
+  background: E8EDDF;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+position: relative;
+ overflow: hidden;
+
+}
+
+.cartbox .button {
+position: absolute;
+right:    0;
+bottom:   0;
+}
+
+/* ****************************************************************************
+SHOPPING CART
+**************************************************************************** */
+
+.heading {
+  padding: 1em 0;
+  border-bottom: 1px solid #D0D0D0;
+
+.cf:before,.cf:after {content: " ";display: table;}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+ width: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+padding: 1em;
+    color: #f7f7f7;
+background: #f34d35;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+display: flex;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+ background: #f34d35;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    
+   
+    font-size: 1.75em;
+}
+
+
+/* 
+****************************************************************************
+CHECKOUT CART SUMMARY
+**************************************************************************** */
+
+.checkout-summary {
+  max-width: 500px;
+  background-color: #fefefe;
+}
+
+.checkout-summary-title {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+}
+
+.checkout-summary-item {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.checkout-summary-item .item-name,
+.checkout-summary-item .item-price {
+  padding: 0 1rem;
+}
+
+.checkout-summary-item .item-name p,
+.checkout-summary-item .item-price p {
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-summary-item .title {
+  font-weight: bold;
+}
+
+.checkout-summary-details {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+****************************************************************************
+BOOK FILTERS PANEL - ON LIBRARY SEARCH PAGE
+**************************************************************************** */
+
+.product-filters {
+  padding: 0.5rem 1.5rem;
+  background-color: #fefefe;
+  margin-top: 2.5rem;
+}
+
+.product-filters label {
+  color: #8a8a8a;
+}
+
+.product-filters .menu.nested {
+  margin-left: 0rem;
+  margin-bottom: 0.9rem;
+}
+
+.product-filters .menu > li > a {
+  padding-left: 0;
+  color: #4a4a4a;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.product-filters .is-accordion-submenu-parent > a::after {
+  border-color: #cacaca transparent transparent;
+}
+
+.product-filters .clear-all {
+  font-size: 0.9rem;
+  color: #cacaca;
+}
+
+.product-filters .more {
+  color: #1779ba;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.product-filters-header {
+  font-size: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.product-filters-tab {
+  border-top: 1px solid #e6e6e6;
+}
+
+.product-filters-tab:last-child() {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.mobile-product-filters {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* ****************************************************************************
+LOGIN FORM
+**************************************************************************** */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-group-label {
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding-left: 40px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+form .form-icons {
+  text-align: center;
+}
+
+form .form-icons h4 {
+  margin-bottom: 1rem;
+}
+
+form .form-icons .input-group-label {
+  background-color: #1779ba;
+  border-color: #1779ba;
+}
+
+form .form-icons .input-group-field {
+  border-color: #1779ba;
+}
+
+form .form-icons .fa {
+  color: white;
+  width: 1rem;
+}
+
+.frmbackground {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.loginsignup {
+  padding: 1rem 1.5em;
+  border-radius: .5rem;
+  background-color: #3d454f;
+}
+
+
+.show-password {
+  width: 100%;
+}
+
+.show-password label {
+  position: absolute;
+  left: -9999px;
+  text-indent: -9999px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password + .unmask {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+  background: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  -webkit-appearance: none;
+}
+
+.password + .unmask:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 17px;
+  height: 17px;
+  background: #e3e3e3;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.password[type="text"] + .unmask:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 13px;
+  height: 13px;
+  background: #aaa;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+
+
+
+/* ****************************************************************************
+subnav used on reviews page
+**************************************************************************** */
+
+
+
+.subnav-hero-section {
+  text-align: center;
+  background: #1779ba;
+  background-size: cover;
+  position: relative;
+  overflow: visible;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+}
+
+.subnav-hero-section .subnav-hero-headline {
+  color: #fefefe;
+}
+
+.subnav-hero-subnav {
+  float: none;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+}
+
+.subnav-hero-subnav li {
+  float: none;
+  display: inline-block;
+}
+
+.subnav-hero-subnav li a {
+  padding: 0.9rem 1rem;
+  font-size: 0.75rem;
+  color: #fefefe;
+  text-transform: uppercase;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.35s ease-in-out;
+}
+
+.subnav-hero-subnav li a.is-active {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+.subnav-hero-subnav li a:hover {
+  background: rgba(254, 254, 254, 0.15);
+}
+
+
+
+
+
+
+/* ****************************************************************************
+FOUNDATION 6 MEDIA QUERIES
+**************************************************************************** */
+
+
+/* ****************************************************************************
+Small only 
+**************************************************************************** */
+
+@media screen and (max-width: 39.9375em) {
+
+
+.hero {
+     display: none;
+  }
+
+/* TOP CONTAINER */
+
+   .top-container {
+     display: none;
+  }
+
+.top-box-a {
+     display: none;
+  }
+
+.top-box-b {
+     display: none;
+  }
+
+/* ECOMMERCE FOOTER */
+
+.portfolio {
+     display: none;
+  }
+/* PROMO BOXES */
+
+.promo-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* BESTSELLER BOXES */
+
+.bestseller-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+}
+
+}
+
+/* ****************************************************************************
+Medium and up 
+**************************************************************************** */
+
+
+@media screen and (min-width: 40em) {
+
+/* HERO */
+
+.hero h1,
+  .hero p {
+    
+width: 100%;
+  }
+
+
+/* PROMO BOXES */
+
+.promo-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+}
+
+/* BESTSELLER BOXES */
+
+.bestseller-boxes {
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+} 
+
+
+/* ****************************************************************************
+Large and up
+**************************************************************************** */
+
+@media screen and (min-width: 64em) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

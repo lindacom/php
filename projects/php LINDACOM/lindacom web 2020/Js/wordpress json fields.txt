@@ -1,0 +1,24 @@
+id: 8
+date: "2019-06-17T09:31:20"
+date_gmt: "2019-06-17T09:31:20"
+guid: {rendered: "http://lindacom.infinityfreeapp.com/wordpress/?p=8"}
+modified: "2019-06-17T09:31:20"
+modified_gmt: "2019-06-17T09:31:20"
+slug: "you-look-like-a-model"
+status: "publish"
+type: "post"
+link: "http://lindacom.infinityfreeapp.com/wordpress/blog/2019/06/17/you-look-like-a-model/"
+title: {rendered: "You look like a model"}
+content: {rendered: "↵<p>Being lost for words isn&#8217;t easy.  Coachi…questions ready to put theory into practice.</p>↵", protected: false}
+excerpt: {rendered: "<p>Being lost for words isn&#8217;t easy. Coaching…8220;You look like a model&#8221;</span></a></p>↵", protected: false}
+author: 1
+featured_media: 0
+comment_status: "open"
+ping_status: "open"
+sticky: false
+template: ""
+format: "standard"
+meta: []
+categories: [3]
+tags: []
+

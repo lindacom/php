@@ -1,0 +1,50 @@
+ <!-- updated code to use more secure prepared statement - signup connection to database and insert post values -->
+ <!--  <?php
+
+  if(isset($_POST["Signup"]))
+{
+   
+  //  email validation
+  // $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL); 
+  
+  //  if($email) {
+//use prepared statement to register new user
+    $sql = "INSERT INTO tbl_customer (CustomerName, email, password, expiry)
+                              VALUES (?, ?, ?, ?)";
+
+    $stmt = $connect->prepare($sql);
+
+    $stmt->bind_param("ssss", $customername, $email, $pwd, $expiry);
+
+// set parameters (from input fields) and execute
+$customername = $_POST["txtsuuser"];
+ $email = $_POST["txtsuemail"];
+$pwd = password_hash($_POST["txtsupass"], PASSWORD_DEFAULT);
+$expiry = (new DateTime('last day of this month + 12 months'))->format('Y-m-d');
+$stmt->execute();
+
+echo "Account created successfully. Your account will expire on:" ;
+
+?> -->
+ 
+
+     <!-- old code - signup connection to database and insert post values -->
+
+      <!--  <?php
+
+  if(isset($_POST['Signup']))
+{
+  
+
+    $sign = "INSERT INTO tbl_customer (CustomerName, email, password)
+    VALUES ('".$_POST["txtsuuser"]."','".$_POST["txtsuemail"]."','".$_POST["txtsupassword"]."')";
+
+    $resulty = mysqli_query($connect,$sign);
+
+    if($resulty) {
+        echo 'user account created please sign in';
+    }
+    
+}
+
+?> -->

@@ -1,0 +1,3 @@
+echo $_GET["title"];
+  echo $_GET["price"];
+   echo $_GET["quantity"];

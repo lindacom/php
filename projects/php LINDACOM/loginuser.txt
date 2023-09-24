@@ -1,0 +1,134 @@
+<?php
+session_start();
+?>
+
+<?php
+
+// define variables and set to empty values
+$username = $password = "";
+$usernameErr = $passwordErr = $mainErr = "";
+
+    if(isset($_POST["Login"])) {
+  
+  if (empty($_POST["txtuser"])) {
+    $usernameErr = "Name is required";
+      } 
+   else {
+    $username = test_input($_POST["txtuser"]);
+     // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$username)) {
+      $usernameErr = "Only letters and white space allowed";
+    }
+  
+  }
+
+  if (empty($_POST["txtpass"])) {
+    $passwordErr = "password is required";
+    } else {
+    $password = test_input($_POST["txtpass"]);
+     // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$password)) {
+      $passwordErr = "Only letters and white space allowed";
+    }
+   
+  }
+
+  $username = $_POST['txtuser']; //txtuser is the name in the form field
+$password = $_POST['txtpass']; //txtpass is the name in the form field
+
+// TO DO: using stmt bind parameter here instead would be more secure
+   
+    $checkuser = "SELECT * FROM blogusers WHERE user_name ='$username' AND user_password ='$password' ";
+$run = mysqli_query($connect, $checkuser);
+
+// if there are results from database 
+if (mysqli_num_rows($run)>0) {
+
+    //set the session with the name user_name 
+$_SESSION["username"] = true; // this will then accept the login when redirecting to previous page
+$_SESSION['user_name'] = $username;
+
+// setting session start and expire times 10 minutes
+
+ $_SESSION['start'] = time(); // Taking now logged in time.
+            // Ending a session in 30 minutes from the starting time.
+            $_SESSION['expire'] = $_SESSION['start'] + (10 * 60);
+
+             $_SESSION["username"] = true;
+    
+  
+
+     
+if(isset($username)) {
+    $url = $_SESSION['loggedin'];
+         $queryb = parse_url($url, PHP_URL_QUERY);
+    
+    /* if(!isset($url)) {
+                     header('Location:http://lindacom.infinityfreeapp.com/articles/index.php?username=' .$_SESSION['user_name']);
+     }*/
+   
+    if ($queryb) {
+        $url .= "&username=" .$_SESSION['user_name'];
+    } else {
+        $url .= "?username=" .$_SESSION['user_name'];
+    }
+       
+          header('Location:'.$url); 
+          
+        } else {
+            header('Location: http://lindacom.infinityfreeapp.com/articles/index.php');
+ 
+      }
+
+
+
+      
+
+
+
+}
+else {
+
+      $mainErr = "Username and/or password do not match! Try again!";
+   
+}
+
+    } //end of first stage checks
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+  checkuser($data);
+}
+
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+

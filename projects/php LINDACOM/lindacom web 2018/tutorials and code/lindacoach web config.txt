@@ -1,0 +1,17 @@
+username epiz_22619130 (Website for lindacoach.epizy.com)
+
+password F34xfOQLfp
+
+ftp hostname ftpupload.net
+
+
+-------
+
+drupal
+
+http://lindacoach.epizy.com/drupal8 
+Administrative URL : http://lindacoach.epizy.com/drupal8/user/login
+
+admin account admin
+password pass
+admin@lindacoach.epizy.com

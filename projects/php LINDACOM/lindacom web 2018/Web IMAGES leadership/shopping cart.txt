@@ -1,0 +1,36 @@
+<form method="post" action="library.php?action=add&id=<?php echo $row["id"]; ?>">
+
+
+<input type="hidden" name="name" value="<?php echo $product['name'] ?>" />
+<input type="hidden" name="price" value="<?php echo $product['price'] ?>"/>
+<input type="submit" name="add_to_cart" class="btn btn-info" value="Add to Cart" />
+
+</form>
+
+<input type="text" name="quantity" class="form-control" value="1" />
+
+-----
+
+<?php
+session_start();
+$connect = mysqli_connect("sql105.epizy.com", "epiz_21113631", "leader01", "epiz_21113631_books");
+$product_ids = array();
+
+//check if Add to Cart button has been submitted
+
+if(filter_input(INPUT_POST, 'add_to_cart')){
+  if(isset($_SESSION['shopping_cart'])){
+}
+else { //if shopping cart doesn't exist, create first product with array key 0
+//create array using submitted form data, start from key 0 and fill it with values
+$_SESSION['shopping_cart'][0] = array
+{
+'id' => filter_input(INPUT_GET, 'id'),
+'name' => filter_input(INPUT_POST, 'title'),
+'price' => filter_input)INPUT_POST, 'price'),
+'quantity' => filter_input(INPUT_POST, 'quantity')
+};
+}
+}
+print_r($_SESSION);
+?>
